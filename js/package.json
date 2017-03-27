@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "scripts": {
+    "webpack": "export NODE_ENV=developement && webpack --hide-modules",
+    "dev": "export NODE_ENV=developement && webpack --hide-modules --watch",
+    "production": "export NODE_ENV=production && node_modules/.bin/webpack --hide-modules"
+  },
+  "devDependencies": {
+    "axios": "^0.15.3",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "eslint": "^3.18.0",
+    "vue": "^2.2.5",
+    "webpack": "^2.3.2"
+  },
+  "dependencies": {
+    "axios": "^0.15.3",
+    "vue": "^2.2.5"
+  }
+}

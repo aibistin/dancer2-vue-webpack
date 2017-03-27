@@ -1,0 +1,31 @@
+
+<div id="projects-app">
+ <div class="columns">
+   <div class="column is-half is-offset-one-quarter">
+     <form method="POST" action="/projects.json" v-on:submit.prevent="onSubmit" v-on:keydown="form.errors.clear($event.target.name)">
+       <label for="name" class="label">Project Name</label>
+       <div class="control">
+         <input class="input" 
+             name="name" id="name" type="text"  class="input"
+             placeholder="Project Name" v-model="form.name" />
+          <span class="help is-danger" v-if="form.errors.has('name')" v-text="form.errors.get('name')"></span>
+       </div>
+   
+       <label for="description" class="label">Description</label>
+       <div class="control">
+         <input class="input is-success" 
+             name="description" id="description" type="text" class="input"
+             placeholder="Project Description"
+             v-model="form.description"  />
+          <span class="help is-danger" v-if="form.errors.has('description')" v-text='form.errors.get("description")'></span>
+       </div>
+   
+       <div class="control is-grouped">
+         <p class="control">
+           <button class="button is-primary" :disabled="form.errors.any()">Create</button>
+         </p>
+       </div>
+     </form>
+   </div>
+ </div>
+</div>
