@@ -1,43 +1,33 @@
-webpackJsonp([0],{
+import Vue from 'vue';
+import axios from 'axios';
+import Form from './core/Form';
 
-/***/ 26:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+window.axios = axios;
+window.Form = Form;
 
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-throw new Error("Cannot find module \".core/Form\"");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_axios__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue__ = __webpack_require__(2);
+/* Set these to true to enable the View.js.devtools to work with Webpack */
+Vue.config.debug = true;
+Vue.config.devtools = true
 
-
-
-
-window.axios = __WEBPACK_IMPORTED_MODULE_1_axios___default.a;
-window.Form = __WEBPACK_IMPORTED_MODULE_0__core_Form___default.a;
-
-new __WEBPACK_IMPORTED_MODULE_2_vue__["default"]({
+new Vue({
     el: '#projects-app',
     data: {
-        form: new __WEBPACK_IMPORTED_MODULE_0__core_Form___default.a({
+        form: new Form({
             name: '',
             description: ''
-        })
+        }),
     },
     methods: {
-        onSubmit: function onSubmit() {
+        onSubmit() {
             console.log("Submitting Stuff: ", this.form);
-            this.form.submit('post', '/projects.json').then(function (response) {
-                return alert("Yeeehaaah");
-            }).catch(function (errors) {
-                for (var e in errors) {
-                    console.log("Error: ", e);
-                }
-            });
+            this.form.submit('post', '/projects.json')
+                .then(response => alert("Yeeehaaah"))
+                .catch(errors => {
+                    //alert("Errors... " +  JSON.stringify(errors))}
+                    for (let e in errors) {
+                        console.log("Error: ", e);
+                    }
+                });
         }
     }
 });
-
-/***/ })
-
-},[26]);
