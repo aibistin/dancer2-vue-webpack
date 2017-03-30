@@ -1,0 +1,54 @@
+#  Ignore These Files And Directories
+#--- Got This Part From https://github.com/github/gitignore
+#    
+/blib/
+/.build/
+_build/
+cover_db/
+inc/
+Build
+!Build/
+Build.bat
+.last_cover_stats
+/Makefile
+/Makefile.old
+/MANIFEST.bak
+/META.yml
+/META.json
+/MYMETA.*
+nytprof.out
+/pm_to_blib
+*.o
+*.bs
+/_eumm/
+
+#--- Perl Maven
+*.bak
+*.db*
+*.swp
+/.tidyall.d/
+/MANIFEST
+/blib
+/config
+/cover_db
+/logs
+/meta
+/pm_to_blib
+/sessions
+/t/files/meta
+cpan.json
+
+#---
+#--- Added These
+#---
+
+#--- Files
+
+*.txt
+*.bkp
+*.bkup
+*.old
+*.csv
+#.gitignore
+/node_modules/
+js/node_modules/
