@@ -7,7 +7,7 @@ window.Form = Form;
 
 /* Set these to true to enable the View.js.devtools to work with Webpack */
 Vue.config.debug = true;
-Vue.config.devtools = true
+Vue.config.devtools = true;
 
 new Vue({
     el: '#projects-app',

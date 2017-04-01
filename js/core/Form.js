@@ -1,5 +1,5 @@
 /* Form Class */
-
+import axios from 'axios';
 import Errors from './Errors';
 
 class Form {
@@ -40,7 +40,7 @@ class Form {
     }
 
     onSuccess (data) {
-        console.log("Success,'data.projects': ", data.projects);
+        console.log("Success,'data.message': ", data.message);
         this.reset();
     }
 

@@ -39,7 +39,7 @@ post q{/projects.:format} => sub {
          error qq{Returning Errors: } . ( dump \%e);
         return status_422( \%e );
     }
-    status_created( { projects => ["Created a new project with name, $name and description, $desc\n"] } );
+    status_created( { message => ["Created a new project with name, $name and description, $desc\n"] } );
 };
 
 #-------------------------------------------------------------------------------
